@@ -1,0 +1,44 @@
+@import "./variable";
+
+@font-face {
+  font-family: "Inter";
+  src: url("https://fonts.google.com/specimen/Inter") format("truetype");
+}
+
+@font-face {
+  font-family: "Noto Sans Japanese";
+  src: url("https://fonts.google.com/noto/specimen/Noto+Sans+JP") format("truetype");
+}
+
+body {
+  font-family: Inter !important;
+}
+
+.bg-main {
+  background-color: $color-dark-500;
+}
+
+.color-white {
+  color: $color-white !important;
+}
+
+.w-23 {
+  width: 23% !important;
+}
+
+.w-24 {
+  width: 24% !important;
+}
+
+.w-45 {
+  width: 45% !important;
+}
+
+.w-70 {
+  width: 70%;
+}
+
+.w-80 {
+  width: 80% !important;
+}
+

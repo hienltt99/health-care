@@ -1,0 +1,40 @@
+@import "src/assets/scss/variable";
+
+.diary-record {
+  .diary-heading {
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 27px;
+    letter-spacing: 0.10999999940395355px;
+    text-align: left;
+  }
+
+  .diaries {
+    border: 2px solid $background-gray-7;
+
+    time {
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 22px;
+      letter-spacing: 0.09000000357627869px;
+      text-align: left;
+    }
+
+    .diary-name, .diary-desc {
+      font-family: Hiragino Kaku Gothic Pro;
+      font-size: 12px;
+      font-weight: 300;
+      line-height: 17px;
+      letter-spacing: 0.05999999865889549px;
+      text-align: left;
+    }
+
+    .diary-desc {
+      display: -webkit-box;
+      -webkit-line-clamp: 5;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+  }
+}

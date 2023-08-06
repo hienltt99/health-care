@@ -1,0 +1,85 @@
+@import "src/assets/scss/variable";
+
+.exercise-record {
+  padding: 20px;
+
+  .heading {
+    display: flex;
+
+    .exercise-title {
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 18px;
+      letter-spacing: 0.15000000596046448px;
+      text-align: left;
+      width: 96px;
+    }
+
+    text {
+      font-size: 22px;
+      font-weight: 400;
+      line-height: 27px;
+      letter-spacing: 0.10999999940395355px;
+      text-align: left;
+    }
+  }
+
+  .exercises {
+    max-height: 300px;
+    overflow: scroll;
+    overflow-x: hidden;
+    list-style-type: circle !important;
+
+    /* width */
+    &::-webkit-scrollbar {
+      width: 6px;
+    }
+
+    /* Track */
+    &::-webkit-scrollbar-track {
+      box-shadow: inset 0 0 5px grey;
+      border-radius: 10px;
+    }
+
+    /* Handle */
+    &::-webkit-scrollbar-thumb {
+      background: $color-primary-300;
+      border-radius: 10px;
+    }
+
+    .exercise-inner {
+      list-style-type: circle;
+      border-bottom: 1px solid $color-gray;
+
+      &.odd {
+        margin-right: 15px;
+      }
+    }
+
+    .exercise-name {
+      color: $color-white;
+      font-family: Hiragino Kaku Gothic Pro;
+      font-size: 15px;
+      font-weight: 300;
+      line-height: 22px;
+      letter-spacing: 0.07500000298023224px;
+      text-align: left;
+
+    }
+
+    .exercise-kcal {
+      color: $color-primary-300;
+      text-align: left;
+    }
+
+    .exercise-time {
+      color: $color-primary-300;
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 22px;
+      letter-spacing: 0.09000000357627869px;
+      text-align: right;
+
+    }
+  }
+}

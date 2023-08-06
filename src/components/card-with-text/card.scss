@@ -1,0 +1,33 @@
+@import "src/assets/scss/variable";
+
+.card-image {
+  width: 234px;
+  height: 145px;
+
+}
+
+.card-desc {
+  font-family: Hiragino Kaku Gothic Pro;
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 22px;
+  letter-spacing: 0.07500000298023224px;
+  text-align: left;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.tags {
+  .tag-item {
+    margin-right: 10px;
+    font-family: Hiragino Kaku Gothic Pro;
+    font-size: 12px;
+    font-weight: 300;
+    line-height: 22px;
+    letter-spacing: 0.05999999865889549px;
+    text-align: left;
+    color: $color-primary-400;
+  }
+}

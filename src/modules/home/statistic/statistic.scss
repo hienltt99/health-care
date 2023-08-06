@@ -1,0 +1,35 @@
+.home-statistic {
+  img {
+    object-fit: cover;
+    background: linear-gradient(225deg, #FFCC21 0%, #FF963C 100%);
+  }
+
+  .chart {
+    height: 312px;
+    width: 100%;
+
+    canvas {
+      width: 100% !important;
+    }
+  }
+
+  .drawer {
+    background-image: url("../../../assets/images/group50.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+
+    .date {
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 22px;
+      text-shadow: 0px 0px 6px 0px #FCA500;
+    }
+
+    .percent {
+      font-size: 25px;
+      font-weight: 400;
+      line-height: 30px;
+      text-shadow: 0px 0px 6px 0px #FCA500;
+    }
+  }
+}

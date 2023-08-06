@@ -1,0 +1,20 @@
+@import "src/assets/scss/variable";
+
+.categories {
+  background-color: $color-primary-300;
+  padding: 24px;
+
+  .category-name {
+    color: $color-primary-300;
+    font-size: 25px;
+    line-height: 30px;
+    font-weight: 400;
+    letter-spacing: 0.125px;
+    text-align: center;
+  }
+
+  .category-desc {
+    background-color: $color-primary-400;
+    width: 80%;
+  }
+}

@@ -1,0 +1,15 @@
+@import "src/assets/scss/variable";
+
+
+.card-title {
+  background-color: $color-primary-300;
+  font-size: 15px;
+  padding: 7px;
+  line-height: 18px;
+}
+
+.card-img {
+  width: 234px;
+  height: 241.53px;
+  object-fit: cover;
+}
