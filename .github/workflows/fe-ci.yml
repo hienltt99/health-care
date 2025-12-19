@@ -1,4 +1,4 @@
-name: FE CI
+name: Continuous integration
 
 on: push
 
