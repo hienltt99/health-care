@@ -1,4 +1,4 @@
-name: Deploy FE to GitHub Pages
+name: Continuous Deployment
 
 on:
   push:
@@ -6,7 +6,7 @@ on:
       - master
 
 jobs:
-  deploy:
+  fe-cd:
     runs-on: ubuntu-latest
 
     steps:

@@ -1,9 +1,10 @@
 name: Continuous integration
 
+# trigger khi commit mới được push vào master
 on: push
 
 jobs:
-  build-fe:
+  fe-ci:
     runs-on: ubuntu-latest
 
     steps:
@@ -11,7 +12,7 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      # 2. Setup NodeJS
+      # 2. Setup NodeJS (do runner không có sẵn node)
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
@@ -36,12 +37,13 @@ jobs:
       - name: Build frontend
         run: npm run build
 
+      # 6. Log folder build
       - name: LS build
         run: ls -la build
 
-      # 6. Upload artifact (kết quả build)
+      # 7. Upload artifact (upload kết quả build)
       - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:
           name: fe-dist
-          path: build
+          path: build #path folder sinh ra sau khi build xong
