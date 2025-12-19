@@ -15,7 +15,7 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: 18
+          node-version: 20
 
       # 3. Cache npm (tăng tốc CI)
       - name: Cache npm
@@ -35,6 +35,9 @@ jobs:
       # 5. Build frontend
       - name: Build frontend
         run: npm run build
+
+      - name: LS build
+        run: ls -la build
 
       # 6. Upload artifact (kết quả build)
       - name: Upload artifact
