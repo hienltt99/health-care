@@ -7,12 +7,17 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v4
+      # 1. Lấy source code
+      - name: Checkout code
+        uses: actions/checkout@v4
 
-      - uses: actions/setup-node@v4
+      # 2. Setup NodeJS
+      - name: Setup Node
+        uses: actions/setup-node@v4
         with:
           node-version: 18
 
+      # 3. Cache npm (tăng tốc CI)
       - name: Cache npm
         uses: actions/cache@v4
         with:
@@ -21,12 +26,17 @@ jobs:
           restore-keys: |
             npm-
 
+      # 4. Install dependencies
+      # Ưu tiên npm ci, fallback sang npm install nếu lỗi
       - name: Install dependencies
-        run: npm ci
+        run: |
+          npm ci || npm install
 
+      # 5. Build frontend
       - name: Build frontend
         run: npm run build
 
+      # 6. Upload artifact (kết quả build)
       - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:
